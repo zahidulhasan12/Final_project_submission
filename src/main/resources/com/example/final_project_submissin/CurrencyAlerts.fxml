@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="1366.0" prefWidth="726.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="your.controller.CurrencyAlertsController">
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="50">
+        <Label style="-fx-font-size: 24px;" text="Log in to Your Account" />
+        <TextField fx:id="usernameField" minWidth="200" promptText="Username" />
+        <PasswordField fx:id="passwordField" minWidth="200" promptText="Password" />
+        <Button fx:id="loginButton" onAction="#loginUser" text="Log In" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="200" />
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="300">
+        <Label style="-fx-font-size: 18px;" text="Set Up a New Alert" />
+        <ComboBox fx:id="currencyPairComboBox" prefWidth="200" promptText="Select Currency Pair" />
+        <TextField fx:id="alertRateField" prefWidth="200" promptText="Desired Rate" />
+        <Button fx:id="setAlertButton" onAction="#setAlert" text="Set Alert" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="500">
+        <Label fx:id="alertConfirmationMessage" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Alert Settings Saved!" />
+        <Button fx:id="confirmAlertButton" onAction="#confirmAlert" text="Confirm Alert Settings" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="600">
+        <Label text="Receive Alerts via:" />
+        <CheckBox fx:id="emailAlertCheck" selected="false" text="Email Alerts" />
+        <CheckBox fx:id="appAlertCheck" selected="false" text="App Notifications" />
+        <Button fx:id="enableAlertButton" onAction="#enableAlertNotifications" text="Enable Alerts" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="800">
+        <Label text="Edit or Delete Existing Alerts:" />
+        <ListView fx:id="existingAlertsListView" onMouseClicked="#editAlert" prefHeight="105.0" prefWidth="626.0" />
+        <Button fx:id="editAlertButton" onAction="#editAlert" text="Edit Selected Alert" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="1000">
+        <Label text="Alert History:" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="1300" />
+     <Button fx:id="archiveAlertSettingsButton" layoutX="298.0" layoutY="1241.0" onAction="#archiveAlertSettings" text="Archive Alert Settings" />
+     <ListView fx:id="alertHistoryListView" layoutX="50.0" layoutY="1098.0" prefHeight="143.0" prefWidth="626.0" />
+     <Button fx:id="deleteAlertButton" layoutX="300.0" layoutY="1048.0" onAction="#deleteAlert" text="Delete Selected Alert" />
+     <Button fx:id="alertsButton" layoutX="302.0" layoutY="239.0" onAction="#navigateToAlerts" text="Go to Currency Alerts" />
+
+</AnchorPane>

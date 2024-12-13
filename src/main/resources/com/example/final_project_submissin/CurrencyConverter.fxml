@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="907.0" prefWidth="876.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="your.controller.CurrencyConverterController">
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="50">
+        <Label style="-fx-font-size: 24px;" text="Currency Converter" />
+    </VBox>
+
+
+    <HBox alignment="CENTER" spacing="10" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="150">
+        <Label text="From:" />
+        <ComboBox fx:id="sourceCurrencyCombo" minWidth="150" promptText="Select Source Currency" />
+        <Label text="To:" />
+        <ComboBox fx:id="targetCurrencyCombo" minWidth="150" promptText="Select Target Currency" />
+    </HBox>
+
+
+    <HBox alignment="CENTER" spacing="10" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="250">
+        <Label text="Amount:" />
+        <TextField fx:id="amountField" minWidth="150" promptText="Enter Amount" />
+    </HBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="350">
+        <Label text="Current Exchange Rate:" />
+        <Label fx:id="exchangeRateLabel" style="-fx-font-weight: bold;" text="1 USD = 0.85 EUR" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="450">
+        <Button fx:id="convertButton" onAction="#convertCurrency" style="-fx-font-size: 16px;" text="Convert" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="550">
+        <Label text="Conversion Summary:" />
+        <Label fx:id="conversionSummaryLabel" style="-fx-font-weight: bold;" text="Source: USD, Target: EUR, Amount: 100" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="650">
+        <Label fx:id="confirmationMessage" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Transaction Complete!" />
+        <Label fx:id="transactionIdLabel" style="-fx-font-weight: bold;" text="Transaction ID: 123456" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="750">
+        <Button fx:id="saveButton" onAction="#saveConversionDetails" text="Save Conversion Details" />
+    </VBox>
+
+</AnchorPane>

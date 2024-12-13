@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="1393.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="your.controller.CustomerSupportController">
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="50">
+        <Label style="-fx-font-size: 24px;" text="Customer Support" />
+        <Button fx:id="accessSupportPageButton" onAction="#goToSupportPage" text="Go to Support" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="150">
+        <Label style="-fx-font-size: 18px;" text="Frequently Asked Questions:" />
+        <ListView fx:id="faqListView" onMouseClicked="#viewFAQDetails" prefHeight="200" prefWidth="300" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="400">
+        <Label text="Submit a Support Ticket:" />
+        <TextArea fx:id="ticketDescriptionField" prefHeight="150" prefWidth="300" promptText="Describe your issue..." />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="600" />
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="700">
+        <Label text="Communicate with Support:" />
+        <TextArea fx:id="supportChatField" prefHeight="150" prefWidth="300" promptText="Enter your message..." />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="900">
+        <Label text="Response Time and Resolution Status:" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="1100">
+        <Label text="Provide Feedback:" />
+        <TextArea fx:id="feedbackTextField" prefHeight="150" prefWidth="300" promptText="Your feedback..." />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="1300" />
+     <Label fx:id="ticketConfirmationMessage" layoutX="71.0" layoutY="600.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Ticket Submitted Successfully!" />
+     <Button fx:id="submitTicketButton" layoutX="156.0" layoutY="634.0" onAction="#submitTicket" text="Submit Ticket" />
+     <Button fx:id="archiveSupportButton" layoutX="117.0" layoutY="1300.0" onAction="#archiveSupportInteraction" text="Archive Support Interactions" />
+     <Button fx:id="submitFeedbackButton" layoutX="147.0" layoutY="1334.0" onAction="#submitFeedback" text="Submit Feedback" />
+     <Label fx:id="responseTimeLabel" layoutX="110.0" layoutY="962.0" style="-fx-font-weight: bold;" text="Resolution Status: Pending" />
+     <Button fx:id="sendMessageButton" layoutX="152.0" layoutY="922.0" onAction="#sendMessageToSupport" text="Send Message" />
+
+</AnchorPane>

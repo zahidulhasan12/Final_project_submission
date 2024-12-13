@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="855.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="your.controller.TransactionTrackingController">
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="50">
+        <Label style="-fx-font-size: 24px;" text="Log in to Your Account" />
+        <TextField fx:id="usernameField" minWidth="200" promptText="Username" />
+        <PasswordField fx:id="passwordField" minWidth="200" promptText="Password" />
+        <Button fx:id="loginButton" onAction="#loginUser" text="Log In" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="200" />
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="300">
+        <Label text="Select a Transaction to Track:" />
+        <ListView fx:id="transactionListView" onMouseClicked="#selectTransaction" prefHeight="187.0" prefWidth="507.0" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="550">
+        <Label text="Transaction Status:" />
+        <Label fx:id="statusLabel" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Pending" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="650">
+        <CheckBox fx:id="emailNotificationCheck" selected="false" text="Receive Email Notifications" />
+        <CheckBox fx:id="smsNotificationCheck" selected="false" text="Receive SMS Notifications" />
+        <Button fx:id="enableNotificationsButton" onAction="#enableNotifications" text="Enable Notifications" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="750" />
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="850">
+        <Label text="Estimated Completion Time:" />
+        <Label fx:id="estimatedTimeLabel" style="-fx-font-weight: bold;" text="N/A" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="950" />
+     <Button fx:id="transactionHistoryButton" layoutX="244.0" layoutY="235.0" onAction="#goToTransactionHistory" text="Transaction History" />
+     <Button fx:id="contactSupportButton" layoutX="252.0" layoutY="764.0" onAction="#contactSupport" text="Contact Support" />
+     <Button fx:id="archiveTransactionButton" layoutX="224.0" layoutY="915.0" onAction="#archiveTransactionDetails" text="Archive Transaction Details" />
+
+</AnchorPane>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="2000.0" prefWidth="719.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="your.controller.CurrencyExchangeEducationController">
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="50">
+        <Label style="-fx-font-size: 24px;" text="Welcome to Currency Exchange Education" />
+        <Button fx:id="resourcesButton" onAction="#navigateToLearningResources" text="Go to Learning Resources" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="200">
+        <Label style="-fx-font-size: 18px;" text="Articles and Guides" />
+        <ListView fx:id="articlesListView" prefHeight="200" prefWidth="300" />
+        <Button fx:id="viewArticleButton" onAction="#viewArticle" text="Read Article" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="500">
+        <Label style="-fx-font-size: 18px;" text="Tutorial Videos" />
+        <ListView fx:id="videoListView" prefHeight="200" prefWidth="300" />
+        <Button fx:id="watchVideoButton" onAction="#watchVideo" text="Watch Video" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="800">
+        <Label style="-fx-font-size: 18px;" text="Upcoming Webinars/Workshops" />
+        <ListView fx:id="webinarListView" prefHeight="200" prefWidth="300" />
+        <Button fx:id="registerForWebinarButton" onAction="#registerForWebinar" text="Register for Webinar" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="1100">
+        <Label style="-fx-font-size: 18px;" text="Download Resource Materials" />
+        <ListView fx:id="downloadListView" prefHeight="200" prefWidth="300" />
+        <Button fx:id="downloadResourceButton" onAction="#downloadResource" text="Download PDF/E-book" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="1400">
+        <Label style="-fx-font-size: 18px;" text="Community Discussions" />
+        <TextArea fx:id="discussionArea" prefHeight="200" prefWidth="300" promptText="Join the discussion..." />
+        <Button fx:id="submitDiscussionButton" onAction="#submitDiscussion" text="Submit Discussion" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="1700">
+        <Label style="-fx-font-size: 18px;" text="Currency Exchange Quizzes" />
+        <Button fx:id="takeQuizButton" onAction="#takeQuiz" text="Take a Quiz" />
+    </VBox>
+
+
+    <VBox alignment="CENTER" spacing="20" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="2000" />
+     <Label layoutX="250.0" layoutY="1833.0" style="-fx-font-size: 18px;" text="Save Educational Resources" />
+     <Button fx:id="archiveResourcesButton" layoutX="255.0" layoutY="1892.0" onAction="#archiveResources" text="Save Resources for Future Reference" />
+
+</AnchorPane>
